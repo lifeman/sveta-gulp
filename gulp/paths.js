@@ -1,29 +1,27 @@
 module.exports = {
   src: {
-    html: 'src/*.html',
+    html: 'src/html/**/*.html',
     css: 'src/sass/main.scss',
     js: 'src/js/**/*.js',
-    images: 'src/images/**/*',
-    fonts: 'src/fonts/**/*',
+    images: 'src/img/**/*',
+  },
+  static: {
+    lib: {src: 'src/lib/**/*', dest: 'build/lib'},
+    contactform: {src: 'src/contactform/**/*', dest: 'build/contactform'},
   },
   watch: {
     html: 'src/**/*.html',
     css: 'src/sass/**/*.scss',
     js: 'src/js/**/*.js',
-    images: 'src/images/**/*',
+    images: 'src/img/**/*',
     fonts: 'src/fonts/**/*',
   },
   build: {
     html: 'build/',
     css: 'build/css',
     js: 'build/js',
-    images: 'build/images',
+    images: 'build/img',
     fonts: 'build/fonts',
-  },
-  inject: {
-    html: 'build/index.html',
-    css: 'build/css/**/*.css',
-    js: 'build/js/**/*.js',
   },
   clean: 'build/',
 };
